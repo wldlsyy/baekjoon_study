@@ -1,1 +1,1 @@
-# baekjoon_study_C
+# baekjoon_study_python
