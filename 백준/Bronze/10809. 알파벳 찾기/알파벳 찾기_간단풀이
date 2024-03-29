@@ -1,0 +1,13 @@
+# for문, index 함수 이용
+str = list(input())
+alpha = 'abcdefghijklmnopqrstuvwxyz'
+for i in alpha:
+    if i in str:
+        print(str.index(i), end=" ")
+    else:
+        print(-1, end=" ")
+
+# find 함수 이용
+str = input()
+for i in 'abcdefghijklmnopqrstuvwxyz':
+    print(str.find(i), end=" ")
