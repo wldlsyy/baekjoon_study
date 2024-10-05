@@ -1,19 +1,18 @@
 def cal_score(str):
-    score = [0]*len(str)
+    # 이전에 연속된 O의 개수
+    count_o = 0
+    # 전체 점수
+    total = 0
 
     for i in range(len(str)):
         if str[i] == "X":
-            score[i] = 0
-        if str[i] == "O":
-            if i-1 < 0:
-                score[i] = 1
-                continue
-            if str[i-1] == "O":
-                score[i] = score[i-1]+1
-            else:
-                score[i] = 1
+            count_o = 0
+            continue
+        else:
+            count_o += 1
+            total += count_o
 
-    print(sum(score))
+    print(total)
 
 # 입력받기
 T = int(input())
